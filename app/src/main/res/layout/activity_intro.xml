@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroActivity">
+    tools:context=".IntroActivity"
+    android:background="@drawable/littledeep_illustration_train_style2">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/relax"
+        android:scaleType="centerCrop"
+        app:civ_border_color="@color/borderColor_civ"
+        app:civ_border_width="4dp"/>
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="Loading..."
+        android:background="@drawable/edit_text"
+        android:textSize="24sp"
+        android:textColor="@color/textColor"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:gravity="center"
+        android:textStyle="italic"/>
+
+</RelativeLayout>

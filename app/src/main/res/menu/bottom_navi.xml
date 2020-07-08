@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_fs" android:title="명언모음집"/>
+    <item android:id="@+id/menu_hp" android:title="힐링포토"/>
+    <item android:id="@+id/menu_worry" android:title="고민게시판"/>
+
+</menu>

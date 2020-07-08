@@ -3,4 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="stroke">#000000</color>
+    <color name="solid">#FFFFFF</color>
+    <color name="textColor">#E0E0E0</color>
+    <color name="borderColor_civ">#000000</color>
+    <color name="bg_navi">#404040</color>
 </resources>

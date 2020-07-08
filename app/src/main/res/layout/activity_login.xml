@@ -1,9 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@drawable/littledeep_illustration_train_style2">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/relax"
+        android:scaleType="centerCrop"
+        app:civ_border_color="@color/borderColor_civ"
+        app:civ_border_width="4dp"/>
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        android:textSize="24sp"
+        android:textColor="@color/textColor"
+        android:layout_below="@id/iv"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="72dp"/>
+
+    <EditText
+        android:id="@+id/et_nickname"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv"
+        android:layout_marginTop="48dp"
+        android:layout_toRightOf="@id/tv_nickname"
+        android:background="@drawable/edit_text"
+        android:padding="4dp"
+        android:layout_marginLeft="8dp"
+        android:hint="ex) 이름, 별명, 아이디 등"
+        android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
+        android:inputType="text"
+        android:maxLength="20"
+        android:gravity="center"
+        android:cursorVisible="false"/>
+
+    <TextView
+        android:id="@+id/tv_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="성별"
+        android:textSize="24sp"
+        android:textColor="@color/textColor"
+        android:layout_below="@id/tv_nickname"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="100dp"/>
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_sex"
+        android:layout_below="@id/et_nickname"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="48dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="남"
+            android:textSize="20sp"
+            android:textColor="@color/textColor"
+            android:background="@drawable/radiobutton_man"
+            android:button="@null"
+            android:paddingRight="24dp"
+            android:paddingLeft="24dp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="여"
+            android:textSize="20sp"
+            android:textColor="@color/textColor"
+            android:background="@drawable/radiobutton_woman"
+            android:layout_marginLeft="24dp"
+            android:button="@null"
+            android:paddingRight="24dp"
+            android:paddingLeft="24dp"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나이"
+        android:textSize="24sp"
+        android:textColor="@color/textColor"
+        android:layout_below="@id/tv_sex"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="100dp"/>
+
+    <EditText
+        android:id="@+id/et_age"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg"
+        android:layout_marginTop="48dp"
+        android:layout_toRightOf="@id/tv_age"
+        android:background="@drawable/edit_text"
+        android:padding="4dp"
+        android:layout_marginLeft="24dp"
+        android:hint="나이 입력"
+        android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
+        android:inputType="number"
+        android:maxLength="2"
+        android:gravity="center"
+        android:cursorVisible="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="시작하기"
+        android:backgroundTint="@color/stroke"
+        android:onClick="clickStart"
+        android:layout_margin="24dp"/>
+
+</RelativeLayout>

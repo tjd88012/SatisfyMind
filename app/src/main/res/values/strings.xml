@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Satisfy Mind</string>
+    <string name="navi_open">메뉴가 열렸습니다</string>
+    <string name="navi_close">메뉴가 닫혔습니다</string>
 </resources>
