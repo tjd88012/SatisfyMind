@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:id="@+id/drawer"
-    android:background="@drawable/littledeep_illustration_train_style2">
+    android:id="@+id/drawer">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,27 +19,30 @@
             android:background="@drawable/title">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="명언모음집"
-                android:gravity="center_horizontal"/>
+                android:text="명언모음집"/>
 
         </androidx.appcompat.widget.Toolbar>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <RelativeLayout
+            android:id="@+id/view"
             android:layout_weight="1"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/bottom_navi"/>
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_navi">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     </LinearLayout>
 

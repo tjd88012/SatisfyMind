@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteDiaryActivity"
+    android:background="@drawable/littledeep_nightsky_style2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/write_diary_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/title">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="다이어리 남기기"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/diary_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내용"
+        android:layout_below="@id/write_diary_toolbar"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/diary_et"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/diary_tv"
+        android:background="@drawable/edit_text"
+        android:hint="내용을 입력해주세요"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColor"
+        android:gravity="top"
+        android:lines="20"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:inputType="textMultiLine"
+        android:maxLines="20"
+        android:padding="8dp"
+        android:cursorVisible="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="취소"
+            android:backgroundTint="@color/stroke"
+            android:onClick="clickCancelDiary"
+            android:layout_margin="24dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="올리기"
+            android:backgroundTint="@color/stroke"
+            android:onClick="clickSaveDiary"
+            android:layout_margin="24dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
