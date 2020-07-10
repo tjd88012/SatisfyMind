@@ -40,7 +40,6 @@
         android:textColor="@color/textColor"
         android:textColorHint="@color/textColor"
         android:gravity="top"
-        android:lines="20"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:inputType="textMultiLine"

@@ -14,7 +14,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.MenuItem;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -53,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         fragments[2]=new WorryFragment();
 
         FragmentTransaction transaction=manager.beginTransaction();
-        transaction.add(R.id.view,fragments[0]);
+        transaction.add(R.id.view, fragments[0]);
         transaction.commit();
 
         bottomNavigationView=findViewById(R.id.bottom_navi);

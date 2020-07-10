@@ -6,20 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class WriteFSActivity extends AppCompatActivity {
+public class WriteWorryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_write_f_s);
+        setContentView(R.layout.activity_write_worry);
     }
 
-    public void clickCancelFS(View view) {
+    public void clickCancelWorry(View view) {
         Intent intent=new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }
 
-    public void clickSaveFS(View view) {
+    public void clickSaveWorry(View view) {
     }
 }

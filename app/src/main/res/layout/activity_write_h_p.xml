@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteHPActivity"
+    android:background="@drawable/littledeep_nightsky_style2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/write_hp_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/title">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="사진나누기"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/write_photo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사진 업로드"
+        android:backgroundTint="@color/stroke"
+        android:layout_below="@id/write_hp_toolbar"
+        android:layout_alignParentRight="true"
+        android:layout_margin="32dp"/>
+
+    <ImageView
+        android:id="@+id/write_photo_iv"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@id/write_photo_button"
+        android:background="@drawable/edit_text"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"/>
+
+    <TextView
+        android:id="@+id/write_photo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내용"
+        android:layout_below="@id/write_photo_iv"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:layout_marginLeft="16dp"/>
+
+    <EditText
+        android:id="@+id/write_photo_text_et"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/write_photo_text"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edit_text"
+        android:hint="내용을 입력해주세요"
+        android:gravity="top"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColor"
+        android:inputType="textMultiLine"
+        android:maxLength="20"
+        android:maxLines="2"
+        android:padding="8dp"
+        android:cursorVisible="false"/>
+
+    <TextView
+        android:id="@+id/write_photo_nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="작성자"
+        android:layout_below="@id/write_photo_iv"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/write_photo_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nickname"
+        android:layout_below="@id/write_photo_nickname_tv"
+        android:background="@drawable/edit_text"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="4dp"
+        android:padding="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="취소"
+            android:backgroundTint="@color/stroke"
+            android:onClick="clickCancelHP"
+            android:layout_margin="24dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="올리기"
+            android:backgroundTint="@color/stroke"
+            android:onClick="clickSaveHP"
+            android:layout_margin="24dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

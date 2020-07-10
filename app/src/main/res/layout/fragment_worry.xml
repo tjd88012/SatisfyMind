@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:id="@+id/drawer"
-    android:background="@drawable/littledeep_illustration_train_style2">
+    android:id="@+id/drawer">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"
@@ -17,6 +16,7 @@
         </androidx.recyclerview.widget.RecyclerView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/float_worry"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_alignParentBottom="true"

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteWorryActivity"
+    android:background="@drawable/littledeep_nightsky_style2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/worry_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/title">
+
+        <TextView
+            android:id="@+id/worry_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="고민나누기"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/write_worry_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="제목"
+        android:layout_below="@id/worry_toolbar"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <EditText
+        android:id="@+id/write_worry_title_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/write_worry_title_tv"
+        android:background="@drawable/edit_text"
+        android:hint="제목을 입력해주세요"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColor"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:inputType="text"
+        android:maxLength="30"
+        android:padding="8dp"
+        android:cursorVisible="false"/>
+
+    <TextView
+        android:id="@+id/write_worry_text_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내용"
+        android:layout_below="@id/write_worry_title_et"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:layout_marginLeft="16dp"/>
+
+    <EditText
+        android:id="@+id/write_worry_text_et"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_below="@id/write_worry_text_tv"
+        android:background="@drawable/edit_text"
+        android:hint="내용을 입력해주세요"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColor"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:maxLines="10"
+        android:padding="8dp"
+        android:cursorVisible="false"/>
+
+    <TextView
+        android:id="@+id/write_worry_nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="작성자"
+        android:layout_below="@id/write_worry_text_et"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:layout_marginRight="16dp"/>
+
+    <TextView
+        android:id="@+id/write_worry_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nickname"
+        android:layout_below="@id/write_worry_nickname_tv"
+        android:background="@drawable/edit_text"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="4dp"
+        android:padding="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="취소"
+            android:backgroundTint="@color/stroke"
+            android:onClick="clickCancelWorry"
+            android:layout_margin="24dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="올리기"
+            android:backgroundTint="@color/stroke"
+            android:onClick="clickSaveWorry"
+            android:layout_margin="24dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
