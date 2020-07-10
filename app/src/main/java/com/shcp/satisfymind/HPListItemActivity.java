@@ -2,22 +2,20 @@ package com.shcp.satisfymind;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class WriteWorryActivity extends AppCompatActivity {
+public class HPListItemActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_write_worry);
+        setContentView(R.layout.activity_h_p_list_item);
     }
 
-    public void clickCancelWorry(View view) {
-        finish();
+    public void clickToggleHP(View view) {
     }
 
-    public void clickSaveWorry(View view) {
+    public void clickSaveReplyHP(View view) {
     }
 }

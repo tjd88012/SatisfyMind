@@ -14,9 +14,14 @@ public class WriteHPActivity extends AppCompatActivity {
         setContentView(R.layout.activity_write_h_p);
     }
 
-    public void clickCancelHP(View view) {
-        Intent intent=new Intent(this, MainActivity.class);
+    public void clickPhotoUpload(View view) {
+        Intent intent=new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        //url을 가져와야 하는 ForResult써야하지만 임시로 넘어가는지만 확인
         startActivity(intent);
+    }
+
+    public void clickCancelHP(View view) {
         finish();
     }
 

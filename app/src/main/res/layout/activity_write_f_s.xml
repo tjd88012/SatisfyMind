@@ -61,7 +61,7 @@
     <EditText
         android:id="@+id/write_fs_text_et"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/write_fs_text_tv"
         android:background="@drawable/edit_text"
         android:hint="내용을 입력해주세요"
@@ -72,6 +72,7 @@
         android:inputType="textMultiLine"
         android:gravity="top"
         android:maxLines="10"
+        android:lines="12"
         android:padding="8dp"
         android:cursorVisible="false"/>
 

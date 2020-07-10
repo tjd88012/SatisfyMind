@@ -28,7 +28,8 @@
         android:backgroundTint="@color/stroke"
         android:layout_below="@id/write_hp_toolbar"
         android:layout_alignParentRight="true"
-        android:layout_margin="32dp"/>
+        android:layout_margin="32dp"
+        android:onClick="clickPhotoUpload"/>
 
     <ImageView
         android:id="@+id/write_photo_iv"
@@ -64,6 +65,7 @@
         android:inputType="textMultiLine"
         android:maxLength="20"
         android:maxLines="2"
+        android:lines="2"
         android:padding="8dp"
         android:cursorVisible="false"/>
 

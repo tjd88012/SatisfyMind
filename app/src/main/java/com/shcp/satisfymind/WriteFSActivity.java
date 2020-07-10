@@ -1,6 +1,8 @@
 package com.shcp.satisfymind;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,8 +17,6 @@ public class WriteFSActivity extends AppCompatActivity {
     }
 
     public void clickCancelFS(View view) {
-        Intent intent=new Intent(this, MainActivity.class);
-        startActivity(intent);
         finish();
     }
 
