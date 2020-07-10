@@ -8,4 +8,8 @@
     <color name="textColor">#E0E0E0</color>
     <color name="borderColor_civ">#000000</color>
     <color name="bg_navi">#404040</color>
+    <color name="diary_memo">#EAE2A0</color>
+    <color name="famous_saying">#AC92DC</color>
+    <color name="man">#00BCD4</color>
+    <color name="woman">#D657F3</color>
 </resources>
