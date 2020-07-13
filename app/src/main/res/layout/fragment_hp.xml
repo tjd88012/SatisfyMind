@@ -23,6 +23,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_margin="16dp"
-            android:backgroundTint="#000000"/>
+            android:backgroundTint="@color/stroke"
+            android:src="@drawable/ic_insert_photo_black_24dp"/>
 
 </RelativeLayout>

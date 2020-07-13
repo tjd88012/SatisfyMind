@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         navigationView=findViewById(R.id.navi);
+        navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

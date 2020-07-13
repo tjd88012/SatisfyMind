@@ -117,7 +117,8 @@
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:layout_below="@id/item_fs_reply_tv"
-        android:layout_marginTop="-3dp" />
+        android:layout_marginTop="-3dp">
+    </ListView>
 
     <EditText
         android:id="@+id/item_fs_reply_et"

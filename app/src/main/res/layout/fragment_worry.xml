@@ -22,6 +22,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_margin="16dp"
-            android:backgroundTint="#FFFFFF"/>
+            android:backgroundTint="@color/stroke"
+            android:src="@drawable/ic_mode_edit_white_24dp"
+            app:rippleColor="@color/solid"/>
 
 </RelativeLayout>
