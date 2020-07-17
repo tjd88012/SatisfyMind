@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WriteDiaryActivity"
+    android:id="@+id/write_diary_layout"
     android:background="@drawable/littledeep_nightsky_style2">
 
     <androidx.appcompat.widget.Toolbar

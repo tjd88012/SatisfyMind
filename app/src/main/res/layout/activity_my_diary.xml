@@ -29,7 +29,8 @@
         <ListView
             android:id="@+id/diary_listview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:stackFromBottom="true">
         </ListView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

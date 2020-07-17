@@ -19,6 +19,7 @@
             android:text="Diary Note"/>
 
         <TextView
+            android:id="@+id/diary_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="날짜 시간"
