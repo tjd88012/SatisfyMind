@@ -39,7 +39,7 @@
         android:background="@drawable/edit_text"
         android:padding="4dp"
         android:layout_marginLeft="8dp"
-        android:hint="ex) 이름, 별명, 아이디 등"
+        android:hint="닉네임 입력"
         android:textColorHint="@color/textColor"
         android:textColor="@color/textColor"
         android:inputType="text"
@@ -69,6 +69,7 @@
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/rb_man"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="남"
@@ -80,6 +81,7 @@
             android:paddingLeft="24dp"/>
 
         <RadioButton
+            android:id="@+id/rb_woman"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="여"
@@ -118,11 +120,26 @@
         android:textColorHint="@color/textColor"
         android:textColor="@color/textColor"
         android:inputType="number"
-        android:maxLength="2"
+        android:maxLength="3"
         android:gravity="center"
         android:cursorVisible="false"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_age"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="24dp"
+        android:padding="8dp"
+        android:textSize="9sp"
+        android:text="※유의사항※\n* 닉네임은 되도록 이름은 기입하지 마세요.(익명성 보장 및 동명 혼돈 우려)\n* 입력된 항목은 앱 삭제 전까지 바꾸실 수 없습니다.(무분별한 개인정보 변경 우려)"
+        android:background="@drawable/edit_text"
+        android:textColor="@color/textColor"
+        android:gravity="center"/>
+<!--    -->
+
     <Button
+        android:id="@+id/loginbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
