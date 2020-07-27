@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.MenuItem;
@@ -87,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
 
         navigationView=findViewById(R.id.navi);
         navigationView.setItemIconTintList(null);
+
+        SharedPreferences preferences=getSharedPreferences("login",MODE_PRIVATE);
+
+        View headerView=navigationView.getHeaderView(0);
+        TextView headerNickName=headerView.findViewById(R.id.tv_changename);
+        headerNickName.setText(preferences.getString("Nickname",""));
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
