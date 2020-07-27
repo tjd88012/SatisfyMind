@@ -8,9 +8,7 @@
     android:id="@+id/drawer"
     android:background="@drawable/littledeep_illustration_train_style2">
 
-<!--  id칸 지우기  -->
     <LinearLayout
-        android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
