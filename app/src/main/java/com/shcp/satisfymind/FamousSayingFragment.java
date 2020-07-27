@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,6 +20,7 @@ import java.util.zip.Inflater;
 public class FamousSayingFragment extends Fragment {
 
     FloatingActionButton button;
+    Button listItemButton;
     Context context;
 
     @Nullable
@@ -29,6 +31,7 @@ public class FamousSayingFragment extends Fragment {
 
         context=getContext();
         button=view.findViewById(R.id.float_fs);
+        listItemButton=view.findViewById(R.id.fslistitem);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +39,16 @@ public class FamousSayingFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        //임시로 화면이 넘어가는 기능 추가
+        listItemButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context,FSListItemActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         return view;
     }

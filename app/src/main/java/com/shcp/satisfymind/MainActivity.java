@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -107,4 +108,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }
