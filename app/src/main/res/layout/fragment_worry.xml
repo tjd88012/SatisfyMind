@@ -19,7 +19,8 @@
             android:id="@+id/worrylistitem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="임시 listButton"/>
+            android:text="임시 listButton"
+            android:layout_alignParentBottom="true"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/float_worry"
