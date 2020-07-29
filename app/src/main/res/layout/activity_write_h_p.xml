@@ -38,7 +38,9 @@
         android:layout_below="@id/write_photo_button"
         android:background="@drawable/edit_text"
         android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"/>
+        android:layout_marginRight="32dp"
+        android:padding="8dp"
+        android:adjustViewBounds="true"/>
 
     <TextView
         android:id="@+id/write_photo_text"

@@ -8,11 +8,11 @@
     android:id="@+id/drawer">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler"
+            android:id="@+id/recycler_hp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager">
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager">
 
         </androidx.recyclerview.widget.RecyclerView>
 
