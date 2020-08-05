@@ -1,6 +1,7 @@
 package com.shcp.satisfymind;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -72,6 +73,15 @@ public class WorryListAdapter extends RecyclerView.Adapter {
                 title=itemView.findViewById(R.id.worry_list_title_woman);
                 countFavor=itemView.findViewById(R.id.worry_list_count_woman);
             }
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    WorryListItem listItem=worryList.get(getLayoutPosition());
+                    Intent intent=new Intent(context,WorryListItemActivity.class);
+                    context.startActivity(intent);
+                }
+            });
 
         }
     }
