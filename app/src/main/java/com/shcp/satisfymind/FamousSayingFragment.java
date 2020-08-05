@@ -28,7 +28,6 @@ import retrofit2.Retrofit;
 public class FamousSayingFragment extends Fragment {
 
     FloatingActionButton button;
-    Button listItemButton;
     Context context;
     RecyclerView recyclerView;
 
@@ -43,7 +42,6 @@ public class FamousSayingFragment extends Fragment {
 
         context=getContext();
         button=view.findViewById(R.id.float_fs);
-        listItemButton=view.findViewById(R.id.fslistitem);
 
         recyclerView=view.findViewById(R.id.recycler_fs);
         adapter=new FSListAdapter(context, fsList);
@@ -53,15 +51,6 @@ public class FamousSayingFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context,WriteFSActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        //임시로 화면이 넘어가는 기능 추가
-        listItemButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(context,FSListItemActivity.class);
                 startActivity(intent);
             }
         });
