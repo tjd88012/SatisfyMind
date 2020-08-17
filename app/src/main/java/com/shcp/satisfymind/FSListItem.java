@@ -5,17 +5,17 @@ public class FSListItem {
     int no;
     String title;
     String text;
-    String nickName;
+    String nickname;
     int favor;
 
     public FSListItem() {
     }
 
-    public FSListItem(int no, String title, String text, String nickName, int favor) {
+    public FSListItem(int no, String title, String text, String nickname, int favor) {
         this.no = no;
         this.title = title;
         this.text = text;
-        this.nickName = nickName;
+        this.nickname = nickname;
         this.favor = favor;
     }
 }

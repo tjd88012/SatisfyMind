@@ -3,6 +3,7 @@ package com.shcp.satisfymind;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -84,9 +85,6 @@ public class FamousSayingFragment extends Fragment {
 
             }
         });
-
-        //리사이클러뷰는 정상적으로 작동되지만 서버에서 읽어으는 부분이 안됨
-        //        //스튜디오 코드와 예제 참조해서 해결해보기
 
     }
 }
