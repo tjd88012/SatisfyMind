@@ -76,6 +76,7 @@ public class FSListAdapter extends RecyclerView.Adapter {
                     context.startActivity(intent);
 
                     //해결이 되었으니 worryactivity에도 똑같이 적용하고 hpactivity를 이미지와 적용시키기
+                    //그리고 현재 핫픽스를 마스터로 옮기는 작업하기
                 }
             });
         }
