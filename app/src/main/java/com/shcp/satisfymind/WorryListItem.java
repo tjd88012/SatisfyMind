@@ -5,18 +5,18 @@ public class WorryListItem {
     int no;
     String title;
     String text;
-    String nickName;
+    String nickname;
     String sex;
     int favor;
 
     public WorryListItem() {
     }
 
-    public WorryListItem(int no, String title, String text, String nickName, String sex, int favor) {
+    public WorryListItem(int no, String title, String text, String nickname, String sex, int favor) {
         this.no = no;
         this.title = title;
         this.text = text;
-        this.nickName = nickName;
+        this.nickname = nickname;
         this.sex = sex;
         this.favor = favor;
     }
