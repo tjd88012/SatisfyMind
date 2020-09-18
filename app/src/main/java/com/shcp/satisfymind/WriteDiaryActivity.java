@@ -36,14 +36,6 @@ public class WriteDiaryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_write_diary);
 
         tvDiary=findViewById(R.id.diary_et);
-        diaryLayout=findViewById(R.id.write_diary_layout);
-        diaryLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                InputMethodManager manager=(InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
-                manager.hideSoftInputFromWindow(tvDiary.getWindowToken(),0);
-            }
-        });
         sqLiteDatabase=openOrCreateDatabase(diaryDB, MODE_PRIVATE, null);
         sqLiteDatabase.execSQL("CREATE TABLE IF NOT EXISTS "+tableName+"(Num Integer primary key autoincrement, Diary TEXT, Date TEXT)");
     }
@@ -51,7 +43,7 @@ public class WriteDiaryActivity extends AppCompatActivity {
     public void clickSaveDiary(View view) {
         diary=tvDiary.getText().toString();
         date=new SimpleDateFormat("yyyy_MM_dd hh:mm:ss").format(new Date());
-        if (diary!=null&diary!="") sqLiteDatabase.execSQL("INSERT INTO " + tableName + "(Diary, Date) VALUES('" + diary + "', '" + date + "')");
+        if (diary!=null&&diary!="") sqLiteDatabase.execSQL("INSERT INTO " + tableName + "(Diary, Date) VALUES('" + diary + "', '" + date + "')");
         Intent intent=new Intent(this , MyDiaryActivity.class);
         startActivity(intent);
         finish();

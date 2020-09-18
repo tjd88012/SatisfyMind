@@ -73,6 +73,13 @@ public class HPListAdapter extends RecyclerView.Adapter {
                 public void onClick(View v) {
                     HPListItem listItem=hpList.get(getLayoutPosition());
                     Intent intent=new Intent(context,HPListItemActivity.class);
+
+                    intent.putExtra("no",listItem.no);
+                    intent.putExtra("nickname",listItem.nickname);
+                    intent.putExtra("image",listItem.file);
+                    intent.putExtra("text",listItem.text);
+                    intent.putExtra("favor",listItem.favor);
+
                     context.startActivity(intent);
                 }
             });
