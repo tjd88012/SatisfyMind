@@ -1,6 +1,7 @@
 package com.shcp.satisfymind;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,6 +67,15 @@ public class HPListAdapter extends RecyclerView.Adapter {
             imageView= itemView.findViewById(R.id.list_item_hp_iv);
             text=itemView.findViewById(R.id.list_item_tv);
             countFavor=itemView.findViewById(R.id.hp_list_count);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    HPListItem listItem=hpList.get(getLayoutPosition());
+                    Intent intent=new Intent(context,HPListItemActivity.class);
+                    context.startActivity(intent);
+                }
+            });
 
         }
     }

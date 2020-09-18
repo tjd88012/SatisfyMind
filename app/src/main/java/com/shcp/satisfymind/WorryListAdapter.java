@@ -1,6 +1,7 @@
 package com.shcp.satisfymind;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,7 +65,6 @@ public class WorryListAdapter extends RecyclerView.Adapter {
         public VH(@NonNull View itemView) {
             super(itemView);
 
-            //임시로 남자 고민으로 통일
             if (preferences.getString("Sex","").equals("남")) {
                 title=itemView.findViewById(R.id.worry_list_title_man);
                 countFavor=itemView.findViewById(R.id.worry_list_count_man);
@@ -72,6 +72,22 @@ public class WorryListAdapter extends RecyclerView.Adapter {
                 title=itemView.findViewById(R.id.worry_list_title_woman);
                 countFavor=itemView.findViewById(R.id.worry_list_count_woman);
             }
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    WorryListItem listItem=worryList.get(getLayoutPosition());
+                    Intent intent=new Intent(context,WorryListItemActivity.class);
+
+                    intent.putExtra("no",listItem.no);
+                    intent.putExtra("title",listItem.title);
+                    intent.putExtra("text",listItem.text);
+                    intent.putExtra("nickname",listItem.nickname);
+                    intent.putExtra("favor",listItem.favor);
+
+                    context.startActivity(intent);
+                }
+            });
 
         }
     }

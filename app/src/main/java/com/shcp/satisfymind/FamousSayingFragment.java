@@ -3,7 +3,9 @@ package com.shcp.satisfymind;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -27,7 +29,6 @@ import retrofit2.Retrofit;
 public class FamousSayingFragment extends Fragment {
 
     FloatingActionButton button;
-    Button listItemButton;
     Context context;
     RecyclerView recyclerView;
 
@@ -42,7 +43,6 @@ public class FamousSayingFragment extends Fragment {
 
         context=getContext();
         button=view.findViewById(R.id.float_fs);
-        listItemButton=view.findViewById(R.id.fslistitem);
 
         recyclerView=view.findViewById(R.id.recycler_fs);
         adapter=new FSListAdapter(context, fsList);
@@ -52,15 +52,6 @@ public class FamousSayingFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context,WriteFSActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        //임시로 화면이 넘어가는 기능 추가
-        listItemButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(context,FSListItemActivity.class);
                 startActivity(intent);
             }
         });
@@ -94,9 +85,6 @@ public class FamousSayingFragment extends Fragment {
 
             }
         });
-
-        //리사이클러뷰는 정상적으로 작동되지만 서버에서 읽어으는 부분이 안됨
-        //        //스튜디오 코드와 예제 참조해서 해결해보기
 
     }
 }

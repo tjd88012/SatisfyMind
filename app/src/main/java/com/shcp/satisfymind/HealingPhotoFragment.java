@@ -25,7 +25,6 @@ import retrofit2.Retrofit;
 public class HealingPhotoFragment extends Fragment {
 
     FloatingActionButton button;
-    Button listItemButton;
     Context context;
 
     RecyclerView recyclerView;
@@ -40,7 +39,6 @@ public class HealingPhotoFragment extends Fragment {
 
         context=getContext();
         button=view.findViewById(R.id.float_hp);
-        listItemButton=view.findViewById(R.id.hplistitem);
 
         recyclerView=view.findViewById(R.id.recycler_hp);
         adapter=new HPListAdapter(context,hpList);
@@ -50,15 +48,6 @@ public class HealingPhotoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context,WriteHPActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        //임시로 화면이 넘어가는 기능 추가
-        listItemButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(context,HPListItemActivity.class);
                 startActivity(intent);
             }
         });
