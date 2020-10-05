@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class FSListItemActivity extends AppCompatActivity {
 
@@ -14,7 +16,6 @@ public class FSListItemActivity extends AppCompatActivity {
     TextView tvNickName;
     TextView tvText;
     TextView tvFavor;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

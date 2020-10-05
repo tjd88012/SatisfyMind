@@ -29,7 +29,7 @@
         android:gravity="top"
         android:textColor="@color/textColor"
         android:textColorHint="@color/textColor"
-        android:lines="2"
+        android:lines="3"
         android:padding="8dp"/>
 
     <TextView
@@ -96,11 +96,15 @@
 
     <ToggleButton
         android:id="@+id/fs_recommend_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_below="@id/item_fs_text"
         android:layout_marginLeft="240dp"
-        android:onClick="clickToggleFS"/>
+        android:textOn=""
+        android:textOff=""
+        android:background="@drawable/recommend"
+        android:onClick="clickToggleFS"
+        android:layout_marginRight="40dp"/>
 
     <TextView
         android:id="@+id/fs_recommend_count"

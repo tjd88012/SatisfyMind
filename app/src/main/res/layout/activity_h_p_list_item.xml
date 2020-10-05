@@ -73,11 +73,15 @@
 
     <ToggleButton
         android:id="@+id/hp_recommend_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_below="@id/item_hp_text"
         android:layout_marginLeft="240dp"
-        android:onClick="clickToggleHP"/>
+        android:textOn=""
+        android:textOff=""
+        android:background="@drawable/recommend"
+        android:onClick="clickToggleHP"
+        android:layout_marginRight="40dp"/>
 
     <TextView
         android:id="@+id/hp_recommend_count"
