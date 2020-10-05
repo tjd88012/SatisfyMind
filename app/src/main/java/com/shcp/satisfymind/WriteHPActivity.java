@@ -133,14 +133,14 @@ public class WriteHPActivity extends AppCompatActivity {
         if (imagePath!=null){
             File f=new File(imagePath);
             RequestBody requestBody=RequestBody.create(MediaType.parse("image/*"),f);
-            file=MultipartBody.Part.createFormData("Image",f.getName(),requestBody);
+            file=MultipartBody.Part.createFormData("File",f.getName(),requestBody);
         }
 
         Call<String> call = retrofitService.insertHP(item,file);
         call.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                if (item.get("Text").equals(null)){
+                if (item.get("Text").equals("")){
                     new AlertDialog.Builder(WriteHPActivity.this).setMessage("모든 항목 입력 후 업로드가 가능합니다.")
                             .setPositiveButton("확인",null).create().show();
                 }else {

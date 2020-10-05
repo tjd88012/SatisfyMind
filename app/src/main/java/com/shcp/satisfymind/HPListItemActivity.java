@@ -33,8 +33,9 @@ public class HPListItemActivity extends AppCompatActivity {
         String text=intent.getStringExtra("text");
         int favor=intent.getIntExtra("favor",0);
 
+        String url="http://shcp.dothome.co.kr/login/HealingPhoto/"+file;
         tvNickName.setText(nickname);
-        Glide.with(this).load(file).into(ivPhoto);
+        Glide.with(this).load(url).into(ivPhoto);
         tvText.setText(text);
         tvFavor.setText(favor+"");
 

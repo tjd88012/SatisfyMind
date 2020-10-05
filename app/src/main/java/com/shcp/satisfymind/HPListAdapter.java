@@ -2,6 +2,7 @@ package com.shcp.satisfymind;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +44,8 @@ public class HPListAdapter extends RecyclerView.Adapter {
         VH vh= (VH) holder;
         HPListItem item=hpList.get(position);
 
-        String url="ftp://shcp.dothome.co.kr/html/login/HealingPhoto/"+item.file;
+        String url="http://shcp.dothome.co.kr/login/HealingPhoto/"+item.file;
+//        String url="http://shcp.dothome.co.kr/html/login/HealingPhoto/photo/20200828051013IMG_20200525_044757.jpg";
         Glide.with(context).load(url).into(vh.imageView);
         vh.text.setText(item.text);
         vh.countFavor.setText(item.favor+"");
@@ -76,7 +78,7 @@ public class HPListAdapter extends RecyclerView.Adapter {
 
                     intent.putExtra("no",listItem.no);
                     intent.putExtra("nickname",listItem.nickname);
-                    intent.putExtra("image",listItem.file);
+                    intent.putExtra("file",listItem.file);
                     intent.putExtra("text",listItem.text);
                     intent.putExtra("favor",listItem.favor);
 
